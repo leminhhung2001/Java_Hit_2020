@@ -1,10 +1,8 @@
 package ex4;
 
-import sun.plugin2.message.JavaScriptCallMessage;
-
 import java.util.Scanner;
 
-public class SinhVien {
+public class Student {
     Scanner sc = new Scanner(System.in);
     private String id;
     private String name;
@@ -12,10 +10,11 @@ public class SinhVien {
     private String address;
     private float gpa;
 
-    public  SinhVien(){
+    public Student(){
 
     }
-    public SinhVien(String id, String name, int age, String address, float gpa) {
+
+    public Student(String id, String name, int age, String address, float gpa) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -62,24 +61,15 @@ public class SinhVien {
     public void setGpa(float gpa) {
         this.gpa = gpa;
     }
-    public void InputSV(){
-        System.out.print("ID: ");
-        id = sc.nextLine();
-        System.out.print("Name: ");
-        name = sc.nextLine();
-        System.out.print("Age: ");
-        age = sc.nextInt();
-        sc.nextLine();
-        System.out.print("Address: ");
-        address = sc.nextLine();
-        System.out.print("Gpa: ");
-        gpa = sc.nextFloat();
-    }
-    public void OutputSV(){
-        System.out.println("ID: " + getId());
-        System.out.println("Name: " + getName());
-        System.out.println("Age: " + getAge());
-        System.out.println("Address: " + getAddress());
-        System.out.println("Gpa: " + getGpa());
+   
+    @Override
+    public String toString() {
+        return "SinhVien{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                ", gpa=" + gpa +
+                '}';
     }
 }

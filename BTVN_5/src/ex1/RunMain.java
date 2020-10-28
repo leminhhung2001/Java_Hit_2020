@@ -18,19 +18,26 @@ public class RunMain {
         for (int i = 0; i < dieuHoas.size(); i++) {
             dieuHoas.get(i).Xuat();
         }
-
-        float min = 100000000f;
-        for (int i = 0; i < dieuHoas.size(); i++) {
-            if(dieuHoas.get(i).getGiaBan() < min){
-                min = dieuHoas.get(i).getGiaBan();
-            }
-        }
+        float giaThapNhat = 0;
         System.out.println("==================================================");
         for (int i = 0; i < n; i++) {
-            if(dieuHoas.get(i).getTenHangSX().equals("Electrolux") && dieuHoas.get(i).getGiaBan() == min){
-                dieuHoas.get(i).Xuat();
+            int k = dieuHoas.get(i).getTenHangSX().compareTo("Electrolux");
+            if(k == 0){
+                giaThapNhat = dieuHoas.get(i).getGiaBan();
+                break;
             }
         }
-
+        for (int i = 0; i < n; i++) {
+            int k = dieuHoas.get(i).getTenHangSX().compareTo("Electrolux");
+            if(k == 0 && dieuHoas.get(i).getGiaBan() < giaThapNhat){
+                giaThapNhat = dieuHoas.get(i).getGiaBan();
+            }
+        }
+        System.out.println("Gia thap nhat: " + giaThapNhat);
+        for (int i = 0; i < n; i++) {
+            if(dieuHoas.get(i).getTenHangSX().compareTo("Electrolux") == 0 && dieuHoas.get(i).getGiaBan() == giaThapNhat){
+                    dieuHoas.get(i).Xuat();
+            }
+        }
     }
 }
