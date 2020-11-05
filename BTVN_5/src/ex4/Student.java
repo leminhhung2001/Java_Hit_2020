@@ -61,7 +61,7 @@ public class Student {
     public void setGpa(float gpa) {
         this.gpa = gpa;
     }
-   
+
     @Override
     public String toString() {
         return "SinhVien{" +
