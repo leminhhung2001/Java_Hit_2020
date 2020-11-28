@@ -2,6 +2,7 @@ package ex4;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class RunMain {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args){
