@@ -1,8 +1,8 @@
 package Film_Manager;
 
 public class Film {
-    private String filmAccount;
     private String filmID;
+    private String filmAccount;
     private String filmName;
     private String filmCategory;
     private String filmType;
@@ -12,7 +12,7 @@ public class Film {
     private String language;
 
 
-    public Film(String filmAccount, String filmID, String filmName, String filmCategory, String filmType, String national, String release, String timeOfFilm, String language) {
+    public Film(String filmID, String filmAccount, String filmName, String filmCategory, String filmType, String national, String release, String timeOfFilm, String language) {
         this.filmAccount = filmAccount;
         this.filmID = filmID;
         this.filmName = filmName;
@@ -98,9 +98,9 @@ public class Film {
 
     @Override
     public String toString() {
-        return "Film_Manager{" +
-                "filmAccount='" + filmAccount + '\'' +
-                ", filmID='" + filmID + '\'' +
+        return "Film{" +
+                "filmID='" + filmID + '\'' +
+                ", filmAccount='" + filmAccount + '\'' +
                 ", filmName='" + filmName + '\'' +
                 ", filmCategory='" + filmCategory + '\'' +
                 ", filmType='" + filmType + '\'' +
