@@ -6,10 +6,10 @@ import java.util.Scanner;
 public class MainClass {
 
     public static Scanner sc = new Scanner(System.in);
-    public static DataManager dataManager = new DataManager();
-    public static String filmFileName = "FILM.txt";
-    public static ArrayList<Film> films = new ArrayList<>();
-    public static void main(String[] args) {
+        public static DataManager dataManager = new DataManager();
+        public static String filmFileName = "FILM.txt";
+        public static ArrayList<Film> films = new ArrayList<>();
+        public static void main(String[] args) {
         int choice;
         do{
             System.out.println("====================================================================");
@@ -377,12 +377,4 @@ public class MainClass {
         }
         return -1;
     }
-//    public static Film getFilm(ArrayList<Film> films, String id){
-//        for (int i = 0; i < films.size(); i++) {
-//            if(films.get(i).getFilmID().compareTo(id) == 0){
-//                return films.get(i);
-//            }
-//        }
-//        return null;
-//    }
 }
