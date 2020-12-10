@@ -20,15 +20,15 @@ public class MainClass {
             System.out.print("Please, choose: ");
             choice = sc.nextInt();
             switch (choice){
-                case 1: FilmSeeker(dataManager, filmFileName); break;
-                case 2: ManageFilm(dataManager, filmFileName); break;
-                case 3: ShowAllFilms(dataManager, filmFileName); break;
+                case 1: FilmSeeker(); break;
+                case 2: ManageFilm(); break;
+                case 3: ShowAllFilms(); break;
                 case 0: System.exit(0);
             }
         }while (true);
     }
 
-    public static void FilmSeeker(DataManager dataManager, String filmFileName){
+    public static void FilmSeeker(){
         films = dataManager.ReadFilmFromFile(filmFileName);
         int choice;
         do{
@@ -101,7 +101,7 @@ public class MainClass {
             System.out.println("==============Film dose not exist=============");
     }
 
-    public static void ManageFilm(DataManager dataManager, String filmFileName){
+    public static void ManageFilm(){
         int choice;
         do{
             System.out.println("1 - Upload Film");
@@ -137,7 +137,7 @@ public class MainClass {
             filmID = sc.nextLine();
             boolean check = checkExistsIdOfFilm(films, filmID);
             if(filmID.matches(regexFilmID)){
-                if(check == true){
+                if(check){
                     System.out.println("***Film already existed***");
                 }
                 else{
@@ -337,7 +337,7 @@ public class MainClass {
         }
 
     }
-    public static void ShowAllFilms(DataManager dataManager, String filmFileName){
+    public static void ShowAllFilms(){
         System.out.println("**************SHOW INFORMATION OF FILMS*****************");
         ArrayList<Film> films = dataManager.ReadFilmFromFile(filmFileName);
         for (Film film: films) {
